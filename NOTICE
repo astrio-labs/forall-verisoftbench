@@ -1,0 +1,16 @@
+Forall VeriSoftBench
+Copyright 2026 Astrio, Inc.
+
+This package contains evaluation metadata and analysis scripts.
+It does not distribute candidate proofs or benchmark source repositories.
+
+VeriSoftBench is an upstream benchmark by Yutong Xin, Qiaochu Chen,
+Greg Durrett, and Isil Dillig.
+https://github.com/utopia-group/VeriSoftBench
+
+The upstream benchmark uses the MIT License. Its source repositories and
+dependencies retain their own licenses. License identifiers and source
+references are recorded in environment/benchmark.json for attribution.
+
+This package is an author-reported research artifact and is not an official
+VeriSoftBench leaderboard certification.

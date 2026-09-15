@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite this metadata release and the upstream VeriSoftBench paper."
+title: "Forall VeriSoftBench evaluation metadata"
+type: dataset
+authors:
+  - name: "Astrio, Inc."
+repository-code: "https://github.com/astrio-labs/forall-verisoftbench"
+url: "https://github.com/astrio-labs/forall-verisoftbench"
+license: Apache-2.0
+date-released: 2026-09-15
+version: "2026.09.15"
+keywords:
+  - Lean
+  - software verification
+  - theorem proving
+  - agent evaluation
+  - VeriSoftBench

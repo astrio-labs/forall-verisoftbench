@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-09-15",
+  "outcome_source": "author_retained_evaluation_records",
+  "reported_source": "manuscript_table_1",
+  "proof_text_included": false,
+  "configurations": [
+    {
+      "configuration_id": "claude_opus_xhigh",
+      "target_protocol": "Pass@8, r=3",
+      "max_samples": 8,
+      "max_review_rounds": null,
+      "actor_compilation_limit": 3,
+      "compilation_limit_scope": "per_sample"
+    },
+    {
+      "configuration_id": "forall_opus_xhigh",
+      "target_protocol": "Pass@8, r=3",
+      "max_samples": 1,
+      "max_review_rounds": null,
+      "actor_compilation_limit": null,
+      "compilation_limit_scope": "uncapped"
+    },
+    {
+      "configuration_id": "claude_opus_low",
+      "target_protocol": "Pass@8, r=3",
+      "max_samples": 8,
+      "max_review_rounds": null,
+      "actor_compilation_limit": 3,
+      "compilation_limit_scope": "per_sample"
+    },
+    {
+      "configuration_id": "forall_opus_low",
+      "target_protocol": "Pass@8, r=3",
+      "max_samples": 1,
+      "max_review_rounds": 5,
+      "actor_compilation_limit": null,
+      "compilation_limit_scope": "uncapped"
+    },
+    {
+      "configuration_id": "claude_fable_low",
+      "target_protocol": "Pass@8, r=3",
+      "max_samples": 8,
+      "max_review_rounds": null,
+      "actor_compilation_limit": 3,
+      "compilation_limit_scope": "per_sample"
+    },
+    {
+      "configuration_id": "forall_fable_low",
+      "target_protocol": "Pass@8, r=3",
+      "max_samples": 1,
+      "max_review_rounds": 5,
+      "actor_compilation_limit": null,
+      "compilation_limit_scope": "uncapped"
+    },
+    {
+      "configuration_id": "numina_fable_low",
+      "target_protocol": "1 sample, r<=10",
+      "max_samples": 1,
+      "max_review_rounds": 10,
+      "actor_compilation_limit": null,
+      "compilation_limit_scope": "uncapped"
+    },
+    {
+      "configuration_id": "codex_sol_low",
+      "target_protocol": "Pass@8, r=3",
+      "max_samples": 8,
+      "max_review_rounds": null,
+      "actor_compilation_limit": 3,
+      "compilation_limit_scope": "per_sample"
+    },
+    {
+      "configuration_id": "forall_sol_low_codex",
+      "target_protocol": "Pass@8, r=3",
+      "max_samples": 1,
+      "max_review_rounds": 3,
+      "actor_compilation_limit": 3,
+      "compilation_limit_scope": "per_task"
+    },
+    {
+      "configuration_id": "codex_sol_xhigh",
+      "target_protocol": "Pass@8, r=3",
+      "max_samples": 8,
+      "max_review_rounds": null,
+      "actor_compilation_limit": 3,
+      "compilation_limit_scope": "per_sample"
+    },
+    {
+      "configuration_id": "forall_sol_xhigh_codex",
+      "target_protocol": "Pass@8, r=3",
+      "max_samples": 1,
+      "max_review_rounds": 3,
+      "actor_compilation_limit": 3,
+      "compilation_limit_scope": "per_task"
+    },
+    {
+      "configuration_id": "opencode_sol_low",
+      "target_protocol": "Pass@8, r=3",
+      "max_samples": 1,
+      "max_review_rounds": 3,
+      "actor_compilation_limit": 3,
+      "compilation_limit_scope": "per_task"
+    },
+    {
+      "configuration_id": "forall_sol_low_opencode",
+      "target_protocol": "Pass@8, r=3",
+      "max_samples": 1,
+      "max_review_rounds": 3,
+      "actor_compilation_limit": 3,
+      "compilation_limit_scope": "per_task"
+    }
+  ],
+  "independent_checker": {
+    "comparator_revision": "71b52ec",
+    "compatibility_patches": 2,
+    "components": [
+      "comparator",
+      "lean4export",
+      "nanoda"
+    ],
+    "eligible_tasks": 72,
+    "toolchains": [
+      "leanprover/lean4:v4.24.0",
+      "leanprover/lean4:v4.24.0-rc1"
+    ],
+    "artifact_hashes_in_original_checker_records": false
+  }
+}

@@ -1,0 +1,14 @@
+configuration_id,system,model,effort,adapter,reported_rules,reported_strict,reported_independent_accepted,reported_independent_judged,reported_input_million,reported_cached_input_million,reported_output_million,reported_cost_usd
+claude_opus_xhigh,Claude Code,Opus 5,xhigh,Claude Code,100,89,,,53.8,50.1,2.09,135
+forall_opus_xhigh,Forall-Lean-Agent,Opus 5,xhigh,Claude Code,100,96,69,69,45.3,44.0,1.58,111
+claude_opus_low,Claude Code,Opus 5,low,Claude Code,99,87,62,69,62.94,58.71,1.18,101
+forall_opus_low,Forall-Lean-Agent,Opus 5,low,Claude Code,100,89,,,132.9,129.4,0.95,118
+claude_fable_low,Claude Code,Fable 5,low,Claude Code,96,89,60,66,57.98,53.84,1.11,157
+forall_fable_low,Forall-Lean-Agent,Fable 5,low,Claude Code,100,89,62,70,178.3,172.6,1.27,350
+numina_fable_low,Numina-Lean-Agent,Fable 5,low,Claude Code,86,,,,899.3,867.8,5.15,2011
+codex_sol_low,Codex,GPT-5.6 Sol,low,Codex,93,82,,,68.1,61.7,0.95,69
+forall_sol_low_codex,Forall-Lean-Agent,GPT-5.6 Sol,low,Codex,100,88,63,69,80.7,75.4,0.54,62
+codex_sol_xhigh,Codex,GPT-5.6 Sol,xhigh,Codex,97,86,,,63.4,56.6,0.95,68
+forall_sol_xhigh_codex,Forall-Lean-Agent,GPT-5.6 Sol,xhigh,Codex,100,88,60,67,104.5,98.1,1.0,85
+opencode_sol_low,OpenCode,GPT-5.6 Sol,low,OpenCode,67,61,42,45,41.9,37.1,0.54,45
+forall_sol_low_opencode,Forall-Lean-Agent,GPT-5.6 Sol,low,OpenCode,70,65,,,26.3,22.3,0.25,33
