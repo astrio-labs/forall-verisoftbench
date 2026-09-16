@@ -73,27 +73,24 @@ def plot(data,root=ROOT):
     plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'axes.spines.top':False,'axes.spines.right':False})
     fig,(left,right)=plt.subplots(1,2,figsize=(14.6,9),gridspec_kw={'width_ratios':[1.65,1]},sharey=True)
     fig.patch.set_facecolor('white')
-    labels=[f"{r['system']} · {r['model']} {r['effort']}"+ ('\n'+r['adapter']+' adapter' if r['system']=='Forall-Lean-Agent' and r['model']=='GPT-5.6 Sol' and r['effort']=='low' else '') for r in rows]
+    labels=[f"{r['system']} · {r['model']} {r['effort']}" for r in rows]
     y=list(range(len(rows)));colors=['#245DA8' if r['system']=='Forall-Lean-Agent' else '#93B6DF' for r in rows]
-    left.barh(y,[r['retained_accepted'] for r in rows],height=.65,color=colors,label='Retained acceptance')
-    left.scatter([r['reported_rules'] for r in rows],y,marker='D',facecolors='white',edgecolors='#153E70',s=35,zorder=4,label='Reported Rules')
+    left.barh(y,[r['reported_rules'] for r in rows],height=.65,color=colors)
     for i,r in enumerate(rows):
-        label=str(r['retained_accepted'])
-        if r['retained_accepted']!=r['reported_rules']:label+=f" / {r['reported_rules']} reported"
+        label=str(r['reported_rules'])
         left.text(2,i,label,va='center',color='#102D50',fontsize=9,bbox=dict(facecolor='white',alpha=.85,edgecolor='none',pad=1))
     left.set_yticks(y,labels);left.invert_yaxis();left.set_xlim(0,105)
-    left.set_xlabel('Accepted tasks out of 100');left.set_title('Retained evidence and manuscript score',loc='left',fontweight='bold',pad=14)
-    left.legend(loc='lower left',bbox_to_anchor=(0,-.13),frameon=False,ncol=2,fontsize=9)
+    left.set_xlabel('Accepted tasks out of 100');left.set_title('Benchmark acceptance',loc='left',fontweight='bold',pad=14)
     right.barh(y,[float(r['reported_cost_usd']) for r in rows],height=.65,color=colors)
     right.set_xscale('log');right.set_xlim(20,4000);right.set_xticks([30,100,300,1000,3000],['30','100','300','1,000','3,000'])
     for i,r in enumerate(rows):right.text(float(r['reported_cost_usd'])*1.08,i,f"${r['reported_cost_usd']:,.0f}",va='center',fontsize=10,color='#153E70')
-    right.tick_params(axis='y',left=False);right.set_xlabel('Reported cost in USD · logarithmic scale');right.set_title('Manuscript cost',loc='left',fontweight='bold',pad=14)
+    right.tick_params(axis='y',left=False);right.set_xlabel('Cost in USD · logarithmic scale');right.set_title('Evaluation cost',loc='left',fontweight='bold',pad=14)
     for ax in [left,right]:
         ax.grid(axis='x',color='#DAE5F2',linewidth=.7);ax.set_axisbelow(True)
         ax.spines['left'].set_visible(False);ax.spines['bottom'].set_color('#A7BDD5');ax.tick_params(axis='y',length=0)
-    fig.suptitle('VeriSoftBench · 100-task subset',x=.03,y=.99,ha='left',fontsize=19,fontweight='bold',color='#153E70')
-    fig.text(.03,.017,'Different execution budgets and retained snapshots limit direct cost comparisons. Full benchmark coverage is 500 tasks.',fontsize=9,color='#466580')
-    fig.subplots_adjust(left=.335,right=.975,top=.9,bottom=.145,wspace=.16)
+    fig.suptitle('VeriSoftBench · 100-task subset',x=.5,y=.99,ha='center',fontsize=19,fontweight='bold',color='#153E70')
+    fig.text(.5,.025,'Scores and costs from manuscript Table 1. Different execution budgets limit direct cost comparisons.',ha='center',fontsize=9,color='#466580')
+    fig.subplots_adjust(left=.27,right=.91,top=.9,bottom=.10,wspace=.16)
     fig.savefig(root/'reports/cost-and-coverage.png',dpi=180,facecolor='white')
     plt.close(fig)
 

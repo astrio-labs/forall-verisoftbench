@@ -14,7 +14,11 @@ The package contains 1,300 task records across 13 configurations, candidate arti
 - [Generated summary](reports/summary.md) compares reported totals with retained records.
 - [Subset membership](tasks.csv) and [environment pins](environment/benchmark.json) identify the evaluated tasks and dependencies.
 
-![Reported cost and retained acceptance](reports/cost-and-coverage.png)
+<p align="center">
+  <img src="reports/cost-and-coverage.png" alt="Benchmark acceptance and evaluation cost" width="1200">
+</p>
+
+The figure uses the scores and costs from manuscript Table 1.
 
 Reported totals and retained records differ in three places. The manuscript reports 100 for Forall-Lean-Agent with Opus 5 xhigh and GPT-5.6 Sol low through Codex, while the retained snapshots contain 98 and 99 accepted task records. The unaided Fable strict total is 89 in the manuscript and 85 in the retained audit. These differences remain explicit in [RECONCILIATION.md](RECONCILIATION.md). No missing success or audit verdict has been inferred.
 
