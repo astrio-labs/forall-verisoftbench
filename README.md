@@ -14,7 +14,7 @@ The package contains 1,300 task records across 13 configurations, candidate arti
 - [Generated summary](reports/summary.md) compares reported totals with retained records.
 - [Subset membership](tasks.csv) and [environment pins](environment/benchmark.json) identify the evaluated tasks and dependencies.
 
-<p align="center">
+<p align="left">
   <img src="reports/cost-and-coverage.png" alt="Benchmark acceptance and evaluation cost" width="1200">
 </p>
 
