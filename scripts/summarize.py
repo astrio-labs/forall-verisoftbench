@@ -91,7 +91,7 @@ def plot(data,root=ROOT):
     fig.suptitle('VeriSoftBench · 100-task subset',x=.5,y=.99,ha='center',fontsize=19,fontweight='bold',color='#153E70')
     fig.text(.5,.025,'Scores and costs from manuscript Table 1. Different execution budgets limit direct cost comparisons.',ha='center',fontsize=9,color='#466580')
     fig.subplots_adjust(left=.27,right=.91,top=.9,bottom=.10,wspace=.16)
-    fig.savefig(root/'reports/cost-and-coverage.png',dpi=180,facecolor='white',
+    fig.savefig(root/'reports/benchmark-results.png',dpi=180,facecolor='white',
                 bbox_inches='tight',pad_inches=.02)
     plt.close(fig)
 

@@ -9,7 +9,7 @@ FILES={
  'tasks.csv','reported_results.csv','results.csv','axiom_audits.csv','independent_checks.csv',
  'environment/README.md','environment/benchmark.json','environment/evaluation.json',
  'scripts/release_data.py','scripts/summarize.py','scripts/validate.py',
- 'reports/summary.md','reports/summary.json','reports/by_repository.csv','reports/cost-and-coverage.png'}
+ 'reports/summary.md','reports/summary.json','reports/by_repository.csv','reports/benchmark-results.png'}
 
 def validate(root=ROOT):
     found=set()
