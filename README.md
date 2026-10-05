@@ -1,5 +1,8 @@
 # Forall VeriSoftBench
 
+[![arXiv](https://img.shields.io/badge/arXiv-2610.00885-b31b1b.svg)](https://arxiv.org/abs/2610.00885)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+
 Evaluation metadata for [Forall-Lean-Agent](https://github.com/astrio-labs/forall) on [VeriSoftBench](https://github.com/utopia-group/VeriSoftBench), released by [Astrio](https://github.com/astrio-labs).
 
 This release covers the **100-task Aristotle subset across 11 repositories**. The full benchmark contains 500 tasks across 23 repositories. The results here do not evaluate the remaining 400 tasks.
@@ -55,8 +58,19 @@ The [data dictionary](DATA_DICTIONARY.md) defines missing values, hash checks, r
 
 ## Citation and license
 
-Related paper
+If you use these results or Forall-Lean-Agent, please cite the [FORALL paper](https://arxiv.org/abs/2610.00885):
 
-*Forall-Lean-Agent for Auditable Reasoning in Formal Mathematics and Software Verification.*
+```bibtex
+@misc{lwin2026forallleanagentauditablereasoningformal,
+  title={FORALL-LEAN-AGENT for Auditable Reasoning in Formal Mathematics and Software Verification},
+  author={Naing Oo Lwin},
+  year={2026},
+  eprint={2610.00885},
+  archivePrefix={arXiv},
+  primaryClass={cs.SE},
+  doi={10.48550/arXiv.2610.00885},
+  url={https://arxiv.org/abs/2610.00885}
+}
+```
 
 Please cite [VeriSoftBench](https://arxiv.org/abs/2602.18307) when using the benchmark. This metadata and analysis release uses the [Apache License 2.0](LICENSE). Benchmark repositories and dependencies retain their original licenses. See [NOTICE](NOTICE) and [CITATION.cff](CITATION.cff).
